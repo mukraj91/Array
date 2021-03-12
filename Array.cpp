@@ -6,6 +6,7 @@ using namespace std;
 int main()
 
 {
+
 cout<<"*******************************Google Mission - 23-July-20202****************************"<<endl;
 
    int array[2] = {10, 20};
@@ -15,6 +16,7 @@ cout<<"*******************************Google Mission - 23-July-20202************
        << array[1] <<"\n"
        << array[2] <<"\n"
        << array[3] <<"\n";
+
    cout<<"=========================================================="<<endl;
 
    int google[5];
@@ -23,17 +25,27 @@ cout<<"*******************************Google Mission - 23-July-20202************
 
      cout <<"Address of ["<< i <<"] is: " << &google[i]<<"\n";
    }
+
    cout<<"=========================================================="<<endl;
 
   // void  alexa[]; // error: declaration of ‘alexa’ as array of void
+  // Note  Array of void is not possible in c++
+
    void  *aws[100]; // Array of void Pointer
 
-   int youtube[] = {100, 200, 300, 400};
+   int youtube[] = {100, 200, 300, 400}; // int (*)[4]
 
-  // int *android = &youtube; // error: cannot convert ‘int (*)[4]’ to ‘int*’ in initialization
-    int *android = youtube;
+   //int *android = &youtube; // error: cannot convert ‘int (*)[4]’ to ‘int*’ in initialization
 
-    cout<<"=========================================================="<<endl;
+   cout<<"Address of &youtube : " << &youtube <<endl;
+
+
+    int *android1 = youtube;
+
+    cout<<"Address of youtube  : " << youtube <<endl;
+
+
+cout<<"=========================================================="<<endl;
 
 
 // Array member access using pointer arithmetics.
@@ -72,16 +84,6 @@ cout<<"=========================================================="<<endl;
 cout<<"*******************************Google Mission - 24-July-20202****************************"<<endl;
 
 
-
-
-
-
-
-
-
-
-
-
-
 return 0;
+
 }
